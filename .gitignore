@@ -1,0 +1,12 @@
+lab1/*/fifteen_game
+lab1/*/polynomial_calc
+lab1/*/tests
+lab1/*/tests_cov
+lab1/*/docs/
+*.o
+*.gcno
+*.gcda
+*.gcov
+.vscode/*
+!.vscode/tasks.json
+.idea/
