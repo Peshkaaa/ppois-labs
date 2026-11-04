@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Установка зависимостей
+        run: sudo apt-get update && sudo apt-get install -y g++ make libunittest++-dev doxygen
+
+      - name: Пятнашки - сборка, тесты, покрытие, документация
+        if: ${{ hashFiles('lab1/fifteen_puzzle/Makefile') != '' }}
+        run: |
+          make -C lab1/fifteen_puzzle
+          make -C lab1/fifteen_puzzle coverage
+          make -C lab1/fifteen_puzzle docs
+
+      - name: Многочлен - сборка, тесты, покрытие, документация
+        if: ${{ hashFiles('lab1/polynomial/Makefile') != '' }}
+        run: |
+          make -C lab1/polynomial
+          make -C lab1/polynomial coverage
+          make -C lab1/polynomial docs
+
+      - name: Публикация релиза (только по тегу v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            lab1/fifteen_puzzle/fifteen_game
+            lab1/polynomial/polynomial_calc

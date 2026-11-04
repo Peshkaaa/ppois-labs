@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Пятнашки: собрать",
+      "type": "shell",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/fifteen_puzzle"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Пятнашки: запустить",
+      "type": "shell",
+      "command": "make && ./fifteen_game",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/fifteen_puzzle"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Пятнашки: тесты",
+      "type": "shell",
+      "command": "make test",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/fifteen_puzzle"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Многочлен: собрать",
+      "type": "shell",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/polynomial"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Многочлен: запустить",
+      "type": "shell",
+      "command": "make && ./polynomial_calc",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/polynomial"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Многочлен: тесты",
+      "type": "shell",
+      "command": "make test",
+      "options": {
+        "cwd": "${workspaceFolder}/lab1/polynomial"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}
