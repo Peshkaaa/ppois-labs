@@ -1,0 +1,10 @@
+PROJECT_NAME      = "Лабораторная работа 1: Пятнашки"
+OUTPUT_LANGUAGE   = Russian
+INPUT_ENCODING    = UTF-8
+OUTPUT_DIRECTORY  = docs
+INPUT             = fifteen_puzzle.h fifteen_puzzle.cpp main.cpp
+EXTRACT_ALL       = YES
+EXTRACT_PRIVATE   = YES
+GENERATE_LATEX    = NO
+HAVE_DOT          = NO
+QUIET             = YES
