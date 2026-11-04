@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа 1: Пятнашки: Исходный файл fifteen_puzzle.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа 1: Пятнашки
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('fifteen__puzzle_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">fifteen_puzzle.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="fifteen__puzzle_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef FIFTEEN_PUZZLE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define FIFTEEN_PUZZLE_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">   16</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> { <a class="code hl_enumvalue" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa">Up</a>, <a class="code hl_enumvalue" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53">Down</a>, <a class="code hl_enumvalue" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff">Left</a>, <a class="code hl_enumvalue" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c">Right</a> };</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html">   25</a></span><span class="keyword">class </span><a class="code hl_function" href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#a864941d96c545affb6eed2ca2fea8f2b">   28</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_fifteen_puzzle.html#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> = std::vector&lt;std::vector&lt;int&gt;&gt;;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#aa0c5e8ba556217d46e039ffc92a82cac">   30</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_fifteen_puzzle.html#aa0c5e8ba556217d46e039ffc92a82cac">kDefaultSize</a> = 4;  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#a15e97f4fc6191b17320613193ae260d4">   31</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_fifteen_puzzle.html#a15e97f4fc6191b17320613193ae260d4">kMinSize</a> = 2;      </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="class_fifteen_puzzle.html#ace0ab553ec23efeeccddd14237e37860">size</a> = <a class="code hl_variable" href="class_fifteen_puzzle.html#aa0c5e8ba556217d46e039ffc92a82cac">kDefaultSize</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_fifteen_puzzle.html#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a>&amp; tiles);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_fifteen_puzzle.html#ace0ab553ec23efeeccddd14237e37860">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_fifteen_puzzle.html#ad55b73599262d73f2f8a3db6ddf0dc70">emptyRow</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_fifteen_puzzle.html#aa4de3ef7a4043a7f93539ffa19b69b69">emptyColumn</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> std::vector&lt;int&gt;&amp; <a class="code hl_function" href="class_fifteen_puzzle.html#ac64cb52d8c7af4fdb349aa7c12a44fc9">operator[]</a>(<span class="keywordtype">int</span> row) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a964e914284511c653d8c4b885d027986">isSolved</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a1ed5115830454833e1ada524245bc8f6">move</a>(<a class="code hl_enumeration" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a4ac88fef6e6208a13285a99fb5413bbe">shuffle</a>(std::mt19937&amp; generator);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a2391bf735af655eb7715393030af08cc">operator==</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a80da0d39114896a6adfd65a199464606">operator!=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#a89dac35a904770a1d26932753b5f5438">   90</a></span>    <a class="code hl_typedef" href="class_fifteen_puzzle.html#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> <a class="code hl_variable" href="class_fifteen_puzzle.html#a89dac35a904770a1d26932753b5f5438">tiles_</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#a1cf4c8906a22d74f15137b6c5c832359">   91</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_fifteen_puzzle.html#a1cf4c8906a22d74f15137b6c5c832359">emptyRow_</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_fifteen_puzzle.html#a5723e510fd873a0d0b25538b472dc873">   92</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_fifteen_puzzle.html#a5723e510fd873a0d0b25538b472dc873">emptyColumn_</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>std::ostream&amp; <a class="code hl_function" href="fifteen__puzzle_8h.html#aaa946d64b4271456f13712bf8a2d39ba">operator&lt;&lt;</a>(std::ostream&amp; output, <span class="keyword">const</span> <a class="code hl_class" href="class_fifteen_puzzle.html">FifteenPuzzle</a>&amp; puzzle);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>std::istream&amp; <a class="code hl_function" href="fifteen__puzzle_8h.html#aa684cdde63f917592e407ceaab07b135">operator&gt;&gt;</a>(std::istream&amp; input, <a class="code hl_class" href="class_fifteen_puzzle.html">FifteenPuzzle</a>&amp; puzzle);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif  </span><span class="comment">// FIFTEEN_PUZZLE_H</span></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html"><div class="ttname"><a href="class_fifteen_puzzle.html">FifteenPuzzle</a></div><div class="ttdoc">Игра «Пятнашки» на квадратном поле.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:25</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a15e97f4fc6191b17320613193ae260d4"><div class="ttname"><a href="class_fifteen_puzzle.html#a15e97f4fc6191b17320613193ae260d4">FifteenPuzzle::kMinSize</a></div><div class="ttdeci">static constexpr int kMinSize</div><div class="ttdoc">Минимальный размер поля.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:31</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a1cf4c8906a22d74f15137b6c5c832359"><div class="ttname"><a href="class_fifteen_puzzle.html#a1cf4c8906a22d74f15137b6c5c832359">FifteenPuzzle::emptyRow_</a></div><div class="ttdeci">int emptyRow_</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:91</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a1ed5115830454833e1ada524245bc8f6"><div class="ttname"><a href="class_fifteen_puzzle.html#a1ed5115830454833e1ada524245bc8f6">FifteenPuzzle::move</a></div><div class="ttdeci">bool move(Direction direction)</div><div class="ttdoc">Перемещает пустую клетку, соседняя плитка встаёт на её место.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:82</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a2287246f6fca41537a8b8e61019a7b22"><div class="ttname"><a href="class_fifteen_puzzle.html#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle::FifteenPuzzle</a></div><div class="ttdeci">FifteenPuzzle(int size=kDefaultSize)</div><div class="ttdoc">Создаёт собранную головоломку.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:25</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a2391bf735af655eb7715393030af08cc"><div class="ttname"><a href="class_fifteen_puzzle.html#a2391bf735af655eb7715393030af08cc">FifteenPuzzle::operator==</a></div><div class="ttdeci">bool operator==(const FifteenPuzzle &amp;other) const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:109</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a4ac88fef6e6208a13285a99fb5413bbe"><div class="ttname"><a href="class_fifteen_puzzle.html#a4ac88fef6e6208a13285a99fb5413bbe">FifteenPuzzle::shuffle</a></div><div class="ttdeci">void shuffle(std::mt19937 &amp;generator)</div><div class="ttdoc">Перемешивает поле случайными ходами из текущего состояния.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:100</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a5723e510fd873a0d0b25538b472dc873"><div class="ttname"><a href="class_fifteen_puzzle.html#a5723e510fd873a0d0b25538b472dc873">FifteenPuzzle::emptyColumn_</a></div><div class="ttdeci">int emptyColumn_</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:92</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a80da0d39114896a6adfd65a199464606"><div class="ttname"><a href="class_fifteen_puzzle.html#a80da0d39114896a6adfd65a199464606">FifteenPuzzle::operator!=</a></div><div class="ttdeci">bool operator!=(const FifteenPuzzle &amp;other) const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:113</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a864941d96c545affb6eed2ca2fea8f2b"><div class="ttname"><a href="class_fifteen_puzzle.html#a864941d96c545affb6eed2ca2fea8f2b">FifteenPuzzle::Tiles</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; int &gt; &gt; Tiles</div><div class="ttdoc">Двумерная таблица плиток: tiles[строка][столбец].</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:28</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a89dac35a904770a1d26932753b5f5438"><div class="ttname"><a href="class_fifteen_puzzle.html#a89dac35a904770a1d26932753b5f5438">FifteenPuzzle::tiles_</a></div><div class="ttdeci">Tiles tiles_</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:90</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_a964e914284511c653d8c4b885d027986"><div class="ttname"><a href="class_fifteen_puzzle.html#a964e914284511c653d8c4b885d027986">FifteenPuzzle::isSolved</a></div><div class="ttdeci">bool isSolved() const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:72</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_aa0c5e8ba556217d46e039ffc92a82cac"><div class="ttname"><a href="class_fifteen_puzzle.html#aa0c5e8ba556217d46e039ffc92a82cac">FifteenPuzzle::kDefaultSize</a></div><div class="ttdeci">static constexpr int kDefaultSize</div><div class="ttdoc">Размер поля по умолчанию.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:30</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_aa4de3ef7a4043a7f93539ffa19b69b69"><div class="ttname"><a href="class_fifteen_puzzle.html#aa4de3ef7a4043a7f93539ffa19b69b69">FifteenPuzzle::emptyColumn</a></div><div class="ttdeci">int emptyColumn() const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:64</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_ac64cb52d8c7af4fdb349aa7c12a44fc9"><div class="ttname"><a href="class_fifteen_puzzle.html#ac64cb52d8c7af4fdb349aa7c12a44fc9">FifteenPuzzle::operator[]</a></div><div class="ttdeci">const std::vector&lt; int &gt; &amp; operator[](int row) const</div><div class="ttdoc">Возвращает строку поля (значение клетки: puzzle[row][column]).</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:68</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_ace0ab553ec23efeeccddd14237e37860"><div class="ttname"><a href="class_fifteen_puzzle.html#ace0ab553ec23efeeccddd14237e37860">FifteenPuzzle::size</a></div><div class="ttdeci">int size() const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:56</div></div>
+<div class="ttc" id="aclass_fifteen_puzzle_html_ad55b73599262d73f2f8a3db6ddf0dc70"><div class="ttname"><a href="class_fifteen_puzzle.html#ad55b73599262d73f2f8a3db6ddf0dc70">FifteenPuzzle::emptyRow</a></div><div class="ttdeci">int emptyRow() const</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:60</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Направление, в котором перемещается пустая клетка.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:16</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53"><div class="ttname"><a href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53">Direction::Down</a></div><div class="ttdeci">@ Down</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:16</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa"><div class="ttname"><a href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa">Direction::Up</a></div><div class="ttdeci">@ Up</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:16</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c">Direction::Right</a></div><div class="ttdeci">@ Right</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:16</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff">Direction::Left</a></div><div class="ttdeci">@ Left</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.h:16</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_aa684cdde63f917592e407ceaab07b135"><div class="ttname"><a href="fifteen__puzzle_8h.html#aa684cdde63f917592e407ceaab07b135">operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;input, FifteenPuzzle &amp;puzzle)</div><div class="ttdoc">Читает поле из потока в формате operator&lt;&lt;.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:128</div></div>
+<div class="ttc" id="afifteen__puzzle_8h_html_aaa946d64b4271456f13712bf8a2d39ba"><div class="ttname"><a href="fifteen__puzzle_8h.html#aaa946d64b4271456f13712bf8a2d39ba">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;output, const FifteenPuzzle &amp;puzzle)</div><div class="ttdoc">Записывает поле в поток: сначала размер, затем строки плиток.</div><div class="ttdef"><b>Определения</b> fifteen_puzzle.cpp:117</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="fifteen__puzzle_8h.html">fifteen_puzzle.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

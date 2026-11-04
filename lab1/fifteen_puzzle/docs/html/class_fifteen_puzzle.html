@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Лабораторная работа 1: Пятнашки: Класс FifteenPuzzle</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Лабораторная работа 1: Пятнашки
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_fifteen_puzzle.html','','class_fifteen_puzzle-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс FifteenPuzzle</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Игра «Пятнашки» на квадратном поле.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fifteen__puzzle_8h_source.html">fifteen_puzzle.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a864941d96c545affb6eed2ca2fea8f2b" id="r_a864941d96c545affb6eed2ca2fea8f2b"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> = std::vector&lt;std::vector&lt;int&gt;&gt;</td></tr>
+<tr class="memdesc:a864941d96c545affb6eed2ca2fea8f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Двумерная таблица плиток: tiles[строка][столбец].  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2287246f6fca41537a8b8e61019a7b22" id="r_a2287246f6fca41537a8b8e61019a7b22"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2287246f6fca41537a8b8e61019a7b22">FifteenPuzzle</a> (int size=<a class="el" href="#aa0c5e8ba556217d46e039ffc92a82cac">kDefaultSize</a>)</td></tr>
+<tr class="memdesc:a2287246f6fca41537a8b8e61019a7b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт собранную головоломку.  <br /></td></tr>
+<tr class="memitem:a4b5521e68f8cf9976727928a4ff8d5cd" id="r_a4b5521e68f8cf9976727928a4ff8d5cd"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4b5521e68f8cf9976727928a4ff8d5cd">FifteenPuzzle</a> (const <a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> &amp;tiles)</td></tr>
+<tr class="memdesc:a4b5521e68f8cf9976727928a4ff8d5cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт головоломку с заданной расстановкой.  <br /></td></tr>
+<tr class="memitem:ace0ab553ec23efeeccddd14237e37860" id="r_ace0ab553ec23efeeccddd14237e37860"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ace0ab553ec23efeeccddd14237e37860">size</a> () const</td></tr>
+<tr class="memitem:ad55b73599262d73f2f8a3db6ddf0dc70" id="r_ad55b73599262d73f2f8a3db6ddf0dc70"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad55b73599262d73f2f8a3db6ddf0dc70">emptyRow</a> () const</td></tr>
+<tr class="memitem:aa4de3ef7a4043a7f93539ffa19b69b69" id="r_aa4de3ef7a4043a7f93539ffa19b69b69"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa4de3ef7a4043a7f93539ffa19b69b69">emptyColumn</a> () const</td></tr>
+<tr class="memitem:ac64cb52d8c7af4fdb349aa7c12a44fc9" id="r_ac64cb52d8c7af4fdb349aa7c12a44fc9"><td class="memItemLeft">const std::vector&lt; int &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac64cb52d8c7af4fdb349aa7c12a44fc9">operator[]</a> (int row) const</td></tr>
+<tr class="memdesc:ac64cb52d8c7af4fdb349aa7c12a44fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает строку поля (значение клетки: puzzle[row][column]).  <br /></td></tr>
+<tr class="memitem:a964e914284511c653d8c4b885d027986" id="r_a964e914284511c653d8c4b885d027986"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a964e914284511c653d8c4b885d027986">isSolved</a> () const</td></tr>
+<tr class="memitem:a1ed5115830454833e1ada524245bc8f6" id="r_a1ed5115830454833e1ada524245bc8f6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1ed5115830454833e1ada524245bc8f6">move</a> (<a class="el" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction)</td></tr>
+<tr class="memdesc:a1ed5115830454833e1ada524245bc8f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемещает пустую клетку, соседняя плитка встаёт на её место.  <br /></td></tr>
+<tr class="memitem:a4ac88fef6e6208a13285a99fb5413bbe" id="r_a4ac88fef6e6208a13285a99fb5413bbe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4ac88fef6e6208a13285a99fb5413bbe">shuffle</a> (std::mt19937 &amp;generator)</td></tr>
+<tr class="memdesc:a4ac88fef6e6208a13285a99fb5413bbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перемешивает поле случайными ходами из текущего состояния.  <br /></td></tr>
+<tr class="memitem:a2391bf735af655eb7715393030af08cc" id="r_a2391bf735af655eb7715393030af08cc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2391bf735af655eb7715393030af08cc">operator==</a> (const <a class="el" href="class_fifteen_puzzle.html">FifteenPuzzle</a> &amp;other) const</td></tr>
+<tr class="memitem:a80da0d39114896a6adfd65a199464606" id="r_a80da0d39114896a6adfd65a199464606"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a80da0d39114896a6adfd65a199464606">operator!=</a> (const <a class="el" href="class_fifteen_puzzle.html">FifteenPuzzle</a> &amp;other) const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:aa0c5e8ba556217d46e039ffc92a82cac" id="r_aa0c5e8ba556217d46e039ffc92a82cac"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#aa0c5e8ba556217d46e039ffc92a82cac">kDefaultSize</a> = 4</td></tr>
+<tr class="memdesc:aa0c5e8ba556217d46e039ffc92a82cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размер поля по умолчанию.  <br /></td></tr>
+<tr class="memitem:a15e97f4fc6191b17320613193ae260d4" id="r_a15e97f4fc6191b17320613193ae260d4"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a15e97f4fc6191b17320613193ae260d4">kMinSize</a> = 2</td></tr>
+<tr class="memdesc:a15e97f4fc6191b17320613193ae260d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Минимальный размер поля.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a89dac35a904770a1d26932753b5f5438" id="r_a89dac35a904770a1d26932753b5f5438"><td class="memItemLeft"><a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a>&#160;</td><td class="memItemRight"><a class="el" href="#a89dac35a904770a1d26932753b5f5438">tiles_</a></td></tr>
+<tr class="memitem:a1cf4c8906a22d74f15137b6c5c832359" id="r_a1cf4c8906a22d74f15137b6c5c832359"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a1cf4c8906a22d74f15137b6c5c832359">emptyRow_</a></td></tr>
+<tr class="memitem:a5723e510fd873a0d0b25538b472dc873" id="r_a5723e510fd873a0d0b25538b472dc873"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a5723e510fd873a0d0b25538b472dc873">emptyColumn_</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Игра «Пятнашки» на квадратном поле. </p>
+<p>Плитки хранятся числами 1..N*N-1, пустая клетка равна 0. Конструктор копирования, оператор = и деструктор не объявлены вручную: класс владеет только std::vector, поэтому копии, созданные компилятором, получаются глубокими и корректными. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Определения типов</h2>
+<a id="a864941d96c545affb6eed2ca2fea8f2b" name="a864941d96c545affb6eed2ca2fea8f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864941d96c545affb6eed2ca2fea8f2b">&#9670;&#160;</a></span>Tiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">FifteenPuzzle::Tiles</a> = std::vector&lt;std::vector&lt;int&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Двумерная таблица плиток: tiles[строка][столбец]. </p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a2287246f6fca41537a8b8e61019a7b22" name="a2287246f6fca41537a8b8e61019a7b22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2287246f6fca41537a8b8e61019a7b22">&#9670;&#160;</a></span>FifteenPuzzle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FifteenPuzzle::FifteenPuzzle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>size</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aa0c5e8ba556217d46e039ffc92a82cac">kDefaultSize</a></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создаёт собранную головоломку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>Длина стороны поля. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>если size меньше kMinSize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b5521e68f8cf9976727928a4ff8d5cd" name="a4b5521e68f8cf9976727928a4ff8d5cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5521e68f8cf9976727928a4ff8d5cd">&#9670;&#160;</a></span>FifteenPuzzle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FifteenPuzzle::FifteenPuzzle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>tiles</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создаёт головоломку с заданной расстановкой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tiles</td><td>Квадратная таблица с числами 0..N*N-1 без повторов. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>если таблица не квадратная, мала или содержит неправильный набор чисел. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="aa4de3ef7a4043a7f93539ffa19b69b69" name="aa4de3ef7a4043a7f93539ffa19b69b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4de3ef7a4043a7f93539ffa19b69b69">&#9670;&#160;</a></span>emptyColumn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::emptyColumn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>Номер столбца пустой клетки. </dd></dl>
+
+</div>
+</div>
+<a id="ad55b73599262d73f2f8a3db6ddf0dc70" name="ad55b73599262d73f2f8a3db6ddf0dc70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55b73599262d73f2f8a3db6ddf0dc70">&#9670;&#160;</a></span>emptyRow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::emptyRow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>Номер строки пустой клетки. </dd></dl>
+
+</div>
+</div>
+<a id="a964e914284511c653d8c4b885d027986" name="a964e914284511c653d8c4b885d027986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964e914284511c653d8c4b885d027986">&#9670;&#160;</a></span>isSolved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FifteenPuzzle::isSolved </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>true, если плитки стоят по порядку, а пустая клетка внизу справа. </dd></dl>
+
+</div>
+</div>
+<a id="a1ed5115830454833e1ada524245bc8f6" name="a1ed5115830454833e1ada524245bc8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed5115830454833e1ada524245bc8f6">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FifteenPuzzle::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="fifteen__puzzle_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></td>          <td class="paramname"><span class="paramname"><em>direction</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перемещает пустую клетку, соседняя плитка встаёт на её место. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Направление движения пустой клетки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если ход выполнен; false, если мешает край поля. </dd></dl>
+
+</div>
+</div>
+<a id="a80da0d39114896a6adfd65a199464606" name="a80da0d39114896a6adfd65a199464606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80da0d39114896a6adfd65a199464606">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FifteenPuzzle::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_fifteen_puzzle.html">FifteenPuzzle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>true, если расстановки плиток различаются. </dd></dl>
+
+</div>
+</div>
+<a id="a2391bf735af655eb7715393030af08cc" name="a2391bf735af655eb7715393030af08cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2391bf735af655eb7715393030af08cc">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FifteenPuzzle::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_fifteen_puzzle.html">FifteenPuzzle</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>true, если расстановки плиток совпадают. </dd></dl>
+
+</div>
+</div>
+<a id="ac64cb52d8c7af4fdb349aa7c12a44fc9" name="ac64cb52d8c7af4fdb349aa7c12a44fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64cb52d8c7af4fdb349aa7c12a44fc9">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; int &gt; &amp; FifteenPuzzle::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает строку поля (значение клетки: puzzle[row][column]). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Номер строки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Значения клеток строки, пустая клетка равна 0. </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>если row вне поля. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4ac88fef6e6208a13285a99fb5413bbe" name="a4ac88fef6e6208a13285a99fb5413bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac88fef6e6208a13285a99fb5413bbe">&#9670;&#160;</a></span>shuffle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FifteenPuzzle::shuffle </td>
+          <td>(</td>
+          <td class="paramtype">std::mt19937 &amp;</td>          <td class="paramname"><span class="paramname"><em>generator</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перемешивает поле случайными ходами из текущего состояния. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">generator</td><td>Генератор случайных чисел.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Так как используются только допустимые ходы, головоломку всегда можно собрать. Результат никогда не равен собранному полю. </p>
+
+</div>
+</div>
+<a id="ace0ab553ec23efeeccddd14237e37860" name="ace0ab553ec23efeeccddd14237e37860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace0ab553ec23efeeccddd14237e37860">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Возвращает</dt><dd>Длина стороны поля. </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a5723e510fd873a0d0b25538b472dc873" name="a5723e510fd873a0d0b25538b472dc873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5723e510fd873a0d0b25538b472dc873">&#9670;&#160;</a></span>emptyColumn_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::emptyColumn_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cf4c8906a22d74f15137b6c5c832359" name="a1cf4c8906a22d74f15137b6c5c832359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf4c8906a22d74f15137b6c5c832359">&#9670;&#160;</a></span>emptyRow_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::emptyRow_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0c5e8ba556217d46e039ffc92a82cac" name="aa0c5e8ba556217d46e039ffc92a82cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c5e8ba556217d46e039ffc92a82cac">&#9670;&#160;</a></span>kDefaultSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::kDefaultSize = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Размер поля по умолчанию. </p>
+
+</div>
+</div>
+<a id="a15e97f4fc6191b17320613193ae260d4" name="a15e97f4fc6191b17320613193ae260d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e97f4fc6191b17320613193ae260d4">&#9670;&#160;</a></span>kMinSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FifteenPuzzle::kMinSize = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Минимальный размер поля. </p>
+
+</div>
+</div>
+<a id="a89dac35a904770a1d26932753b5f5438" name="a89dac35a904770a1d26932753b5f5438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89dac35a904770a1d26932753b5f5438">&#9670;&#160;</a></span>tiles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a864941d96c545affb6eed2ca2fea8f2b">Tiles</a> FifteenPuzzle::tiles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="fifteen__puzzle_8h_source.html">fifteen_puzzle.h</a></li>
+<li><a class="el" href="fifteen__puzzle_8cpp.html">fifteen_puzzle.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_fifteen_puzzle.html">FifteenPuzzle</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
