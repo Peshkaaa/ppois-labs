@@ -1,0 +1,10 @@
+PROJECT_NAME      = "Лабораторная работа 1: Многочлен"
+OUTPUT_LANGUAGE   = Russian
+INPUT_ENCODING    = UTF-8
+OUTPUT_DIRECTORY  = docs
+INPUT             = polynomial.h polynomial.cpp main.cpp
+EXTRACT_ALL       = YES
+EXTRACT_PRIVATE   = YES
+GENERATE_LATEX    = NO
+HAVE_DOT          = NO
+QUIET             = YES
