@@ -13,18 +13,24 @@ if(HOTEL_COVERAGE)
     add_link_options(--coverage)
 endif()
 
+if(MSVC)
+    set(HOTEL_WARNINGS /W4)
+else()
+    set(HOTEL_WARNINGS -Wall -Wextra -Wpedantic)
+endif()
+
 file(GLOB HOTEL_SOURCES CONFIGURE_DEPENDS src/*.cpp)
 file(GLOB CLI_SOURCES CONFIGURE_DEPENDS cli/*.cpp)
 file(GLOB TEST_SOURCES CONFIGURE_DEPENDS tests/*.cpp)
 
 add_library(hotel_core STATIC ${HOTEL_SOURCES})
 target_include_directories(hotel_core PUBLIC include)
-target_compile_options(hotel_core PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(hotel_core PRIVATE ${HOTEL_WARNINGS})
 
 add_library(hotel_cli_lib STATIC ${CLI_SOURCES})
 target_include_directories(hotel_cli_lib PUBLIC cli)
 target_link_libraries(hotel_cli_lib PUBLIC hotel_core)
-target_compile_options(hotel_cli_lib PRIVATE -Wall -Wextra -Wpedantic)
+target_compile_options(hotel_cli_lib PRIVATE ${HOTEL_WARNINGS})
 
 add_executable(hotel_cli app/main.cpp)
 target_link_libraries(hotel_cli PRIVATE hotel_cli_lib)

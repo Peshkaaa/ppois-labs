@@ -1,6 +1,7 @@
 #include "hotel/rooms.hpp"
 
 #include <algorithm>
+#include <iterator>
 #include <numeric>
 
 #include "hotel/exceptions.hpp"

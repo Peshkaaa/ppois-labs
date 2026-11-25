@@ -1,3 +1,4 @@
+#include <iterator>
 #include "hotel/dining.hpp"
 
 #include <algorithm>
