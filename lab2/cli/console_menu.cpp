@@ -31,8 +31,8 @@ ConsoleMenu::ConsoleMenu(std::shared_ptr<Hotel> hotel, std::shared_ptr<Reception
       nextGuestId_(1) {}
 
 void ConsoleMenu::run() {
-    bool running = true;
     try {
+        bool running = true;
         while (running) {
             running = step();
         }
