@@ -8,6 +8,11 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 option(HOTEL_COVERAGE "Build with gcov coverage instrumentation" OFF)
 
+if(HOTEL_COVERAGE)
+    add_compile_options(--coverage -O0)
+    add_link_options(--coverage)
+endif()
+
 file(GLOB HOTEL_SOURCES CONFIGURE_DEPENDS src/*.cpp)
 file(GLOB CLI_SOURCES CONFIGURE_DEPENDS cli/*.cpp)
 file(GLOB TEST_SOURCES CONFIGURE_DEPENDS tests/*.cpp)
@@ -29,10 +34,3 @@ add_executable(hotel_tests ${TEST_SOURCES})
 target_include_directories(hotel_tests PRIVATE tests)
 target_link_libraries(hotel_tests PRIVATE hotel_cli_lib)
 add_test(NAME hotel_tests COMMAND hotel_tests)
-
-if(HOTEL_COVERAGE)
-    foreach(target hotel_core hotel_cli_lib hotel_tests)
-        target_compile_options(${target} PRIVATE --coverage -O0)
-        target_link_options(${target} PRIVATE --coverage)
-    endforeach()
-endif()
