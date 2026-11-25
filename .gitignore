@@ -9,3 +9,25 @@ lab1/*/tests_cov
 .vscode/*
 !.vscode/tasks.json
 .idea/
+# Build artifacts
+build/
+build-*/
+cmake-build-*/
+*.o
+*.a
+*.exe
+*.gcda
+*.gcno
+*.gcov
+coverage*.xml
+coverage*.html
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+
+# IDE / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
